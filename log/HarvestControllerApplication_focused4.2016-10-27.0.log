@@ -1,0 +1,1058 @@
+17:17:56.523 INFO  d.n.common.utils.ApplicationUtils - Starting dk.netarkivet.harvester.heritrix3.HarvestControllerServer
+Version: 5.1 (<a href="https://github.com/netarchivesuite/netarchivesuite/commit/cde61d78299cabccae6195908b81ef77c84a76b9">cde61d7829</a>)
+17:17:56.612 INFO  d.n.common.utils.ApplicationUtils - Java VM: 1.7.0_80
+17:17:56.613 INFO  d.n.common.utils.ApplicationUtils - java.home: /opt/jdk/jdk1.7.0_80/jre
+17:17:56.613 INFO  d.n.common.utils.ApplicationUtils - Working dir: /home/test/IMRT
+17:17:56.624 INFO  d.n.common.utils.ApplicationUtils - Using settings files '/home/test/IMRT/conf/settings_HarvestControllerApplication_focused4.xml'
+17:17:57.997 INFO  d.n.m.d.JMSMonitorRegistryClient - Registering this client for monitoring every 1 minutes, using hostname 'harvester-1' and JMX/RMI ports 8114/8214
+17:17:58.024 INFO  d.n.c.m.MBeanConnectorCreator - Registered mbean server in registry on port 8114 communicating on port 8214 using password file 'conf/jmxremote.password'.
+Service URL is service:jmx:rmi://harvester-1:8214/jndi/rmi://harvester-1:8114/jmxrmi
+17:17:58.204 INFO  d.n.common.utils.ApplicationUtils - dk.netarkivet.harvester.heritrix3.HarvestControllerServer Running
+17:17:58.266 INFO  d.n.c.distribute.JMSConnectionSunMQ - Creating instance of dk.netarkivet.common.distribute.JMSConnectionSunMQ
+17:17:58.339 INFO  d.n.c.distribute.JMSConnectionSunMQ - Establishing SunMQ JMS Connection to '192.168.1.51:7676'
+17:18:01.590 INFO  d.n.h.h.HarvestControllerServer - Starting HarvestControllerServer.
+17:18:01.591 INFO  d.n.h.h.HarvestControllerServer - Bound to harvest channel 'FOCUSED'
+17:18:01.664 INFO  d.n.h.h.HarvestControllerServer - Serverdir: 'harvester_focused'
+17:18:01.667 INFO  d.n.h.h.HarvestControllerServer - Harvesting requires at least 400000000 bytes free.
+17:18:03.052 INFO  d.n.a.a.d.JMSArcRepositoryClient - JMSArcRepositoryClient will retry a store 3 times and timeout on each try after 3600000 milliseconds, and timeout on each getrequest after 300000 milliseconds.
+17:18:03.313 INFO  d.n.a.a.d.JMSArcRepositoryClient - JMSArcRepository listens for replies on channel '[Queue 'IMRT_COMMON_THIS_REPOS_CLIENT_192_168_1_60_HCS_FOCUSED4']'
+17:18:03.363 INFO  d.n.h.heritrix3.PostProcessing - Looking for unprocessed crawldata in 'harvester_focused'
+17:18:03.562 INFO  d.n.h.h.HarvestControllerServer - Requested to check the validity of harvest channel 'FOCUSED'
+17:18:03.674 INFO  d.n.h.h.HarvestControllerServer - Received message stating that channel 'FOCUSED' is valid.
+17:18:03.728 INFO  d.n.h.h.HarvestControllerServer - Starts to listen to new jobs on queue '[Queue 'IMRT_COMMON_JOB_PARTIAL_FOCUSED']'
+17:24:13.555 INFO  d.n.h.h.HarvestControllerServer - Received crawlrequest for job 6: 'ID:329-192.168.1.51(f7:db:b0:a7:73:6a)-50634-1477585501410: To IMRT_COMMON_JOB_PARTIAL_FOCUSED ReplyTo IMRT_COMMON_ERROR OK Job: Job 6 (state = SUBMITTED, HD = 6, channel = FOCUSED, snapshot = false, forcemaxcount = -1, forcemaxbytes = 1000000000, forcemaxrunningtime = 0, orderxml = default_orderxml, numconfigs = 1, created = Thu Oct 27 17:24:45 CET 2016, submitted = Thu Oct 27 17:25:01 CET 2016), metadata: [URL= metadata://netarkivet.dk/crawl/setup/duplicatereductionjobs?majorversion=1&minorversion=0&harvestid=6&harvestnum=0&jobid=6 ; mimetype= text/plain ; data= ]'
+17:24:13.648 INFO  d.n.h.h.HarvestControllerServer - Started harvester thread for job 6
+17:24:13.651 INFO  d.n.common.distribute.JMSConnection - Removing listener from channel 'IMRT_COMMON_JOB_PARTIAL_FOCUSED'
+17:24:13.689 INFO  d.n.harvester.heritrix3.HarvestJob - Created crawl directory: 'harvester_focused/6_1477585453683'
+17:24:14.433 INFO  d.n.h.indexserver.FileBasedCache - Metadata cache for 'DEDUP_CRAWL_LOG' uses directory '/home/test/IMRT/cache/DEDUP_CRAWL_LOG'
+17:24:14.454 INFO  d.n.h.indexserver.FileBasedCache - Generated index '/home/test/IMRT/cache/DEDUP_CRAWL_LOG/empty-cache' of id '[]', request was for '[]'
+17:24:14.454 INFO  d.n.harvester.heritrix3.HarvestJob - Starting crawl of job : 6
+17:24:14.593 INFO  d.n.h.h.HeritrixLauncherAbstract - Make the template ready for Heritrix3
+17:24:14.817 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix for job 6 of harvest 6 in harvester_focused/6_1477585453683 in crawldir harvester_focused/6_1477585453683
+17:24:29.691 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix3 with the following arguments:./bin/heritrix -b harvester-1 -p  8196 -a  admin:adminPassword -s h3server.jks,h3server,h3server 
+17:24:29.748 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting FOREGROUND to 'true'
+17:24:29.798 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting JAVA_OPTS to '-Xmx1598M  -Ddk.netarkivet.settings.file=/home/test/IMRT/conf/settings_HarvestControllerApplication_focused4.xml'
+17:24:29.798 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting HERITRIX_OUT to '/home/test/IMRT/harvester_focused/6_1477585453683/heritrix_out.log'
+17:24:29.799 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting output from heritrix3 to 'harvester_focused/6_1477585453683/heritrix3_out.log', and errors to 'harvester_focused/6_1477585453683/heritrix3_err.log'
+17:24:29.938 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine launched successfully
+17:24:56.265 INFO  d.n.h.h.c.HeritrixController - Heritrix3 REST interface up and running
+17:24:56.266 INFO  d.n.h.h.c.HeritrixController - Copying the crawler-beans.cxml file and seeds.txt to the heritrix3 jobdir 'harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683'
+17:24:58.360 INFO  d.n.h.h.c.HeritrixController - H3 jobs available for building: 6_1477585453683 
+17:25:25.527 INFO  d.n.h.h.c.HeritrixController - Job 6_1477585453683 built successfully
+17:25:27.258 INFO  d.n.h.h.c.HeritrixController - The H3 job 6_1477585453683 in now in state CrawlControllerState.NASCENT
+17:27:05.415 WARN  d.n.h.h.c.HeritrixController - The job state is now RUNNING. Should have been CrawlControllerState.PAUSED
+17:27:05.505 INFO  d.n.h.h.c.HeritrixController - The job 6_1477585453683 is now in state RUNNING
+17:27:05.506 INFO  d.n.h.h.controller.HeritrixLauncher - Starting periodic CrawlControl with CRAWL_CONTROL_WAIT_PERIOD=20 seconds
+17:27:05.568 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:27:05.616 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:27:05.618 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 26.457399103139014%
+17:27:25.705 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:27:25.719 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:27:25.720 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 40.17094017094017%
+17:27:45.757 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:27:45.765 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:27:45.766 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 44.78764478764479%
+17:28:05.835 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:28:05.841 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:28:05.842 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 52.46478873239437%
+17:28:25.896 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:28:25.906 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:28:25.907 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 59.177215189873415%
+17:28:45.982 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:28:45.998 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:28:45.998 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 63.6094674556213%
+17:29:06.043 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:29:06.050 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:29:06.051 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 60.5%
+17:29:26.094 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:29:26.101 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:29:26.101 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 63.42042755344418%
+17:29:46.137 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:29:46.144 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:29:46.145 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 64.97695852534562%
+17:30:06.183 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:30:06.189 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:30:06.189 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 66.01307189542484%
+17:30:26.224 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:30:26.230 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:30:26.231 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 63.1578947368421%
+17:30:46.268 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:30:46.274 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:30:46.275 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 62.79491833030853%
+17:31:06.375 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:31:06.398 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:31:06.399 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 64.37389770723104%
+17:31:26.435 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:31:26.446 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:31:26.446 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 64.20361247947454%
+17:31:46.482 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:31:46.488 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:31:46.489 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 66.88417618270799%
+17:32:06.522 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:32:06.528 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:32:06.529 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 69.30533117932148%
+17:32:26.565 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:32:26.572 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:32:26.572 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 69.92248062015504%
+17:32:46.626 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:32:46.645 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:32:46.646 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 72.48520710059172%
+17:33:06.680 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:33:06.686 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:33:06.686 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 70.65948855989232%
+17:33:26.720 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:33:26.727 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:33:26.727 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 72.30971128608924%
+17:33:46.767 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:33:46.772 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:33:46.773 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 75.390625%
+17:34:06.817 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:34:06.823 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:34:06.824 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 80.28534370946822%
+17:34:26.856 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:34:26.862 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:34:26.863 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 82.39795918367346%
+17:34:46.917 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:34:46.927 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:34:46.927 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 82.6946847960445%
+17:35:06.968 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:35:06.974 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:35:06.975 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 83.11218335343787%
+17:35:27.016 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:35:27.023 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:35:27.023 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 84.71563981042654%
+17:35:47.085 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:35:47.104 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:35:47.104 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 88.60164512338426%
+17:36:07.136 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:36:07.142 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:36:07.143 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 82.7438370846731%
+17:36:27.204 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:36:27.210 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:36:27.211 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 79.15831663326654%
+17:36:47.243 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:36:47.249 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:36:47.250 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 80.94768015794669%
+17:37:07.288 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:37:07.294 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:37:07.294 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 82.08661417322834%
+17:37:27.326 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:37:27.332 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:37:27.333 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 82.76863504356244%
+17:37:47.381 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:37:47.394 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:37:47.394 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 84.48275862068965%
+17:38:07.432 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:38:07.438 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:38:07.439 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 86.45038167938931%
+17:38:27.475 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:38:27.481 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:38:27.481 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 88.39200761179829%
+17:38:47.513 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:38:47.524 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:38:47.524 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 90.80568720379146%
+17:39:07.557 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:39:07.563 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:39:07.563 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 92.7289896128423%
+17:39:27.612 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:39:27.618 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:39:27.624 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 94.64788732394366%
+17:39:47.657 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:39:47.664 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:39:47.665 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 96.171802054155%
+17:40:07.700 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:40:07.706 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:40:07.706 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 96.7741935483871%
+17:40:27.739 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 6. Considering the crawl to be not finished
+17:40:27.745 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:40:27.745 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 6, Harvest ID: 6, https://harvester-1:8196/engine
+null
+RUNNING 97.35883424408014%
+17:40:47.786 INFO  d.n.h.h.d.CrawlProgressMessage - Job 6 seems to be no longer in progress. 
+17:40:47.791 INFO  d.n.h.h.d.CrawlProgressMessage - Job 6 seems to be no longer in progress. 
+17:40:47.792 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID 6: crawl is finished.
+17:40:47.792 INFO  d.n.h.h.controller.HeritrixLauncher - CrawlJob is now over
+17:40:47.894 INFO  d.n.h.h.c.HeritrixController - Tearing down h3 job 6_1477585453683
+17:40:48.685 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine shutdown was successful. ExitValue =  0
+17:40:48.715 INFO  d.n.h.heritrix3.PostProcessing - Store files in directory 'harvester_focused/6_1477585453683' from jobID: 6.
+17:40:48.716 INFO  d.n.h.heritrix3.PostProcessing - Store the files from harvest in 'harvester_focused/6_1477585453683'
+17:40:53.794 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for heritrix files in the following directories: /home/test/IMRT/harvester_focused/6_1477585453683,/home/test/IMRT/harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683, /home/test/IMRT/harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports
+17:40:53.861 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file scope.log
+17:40:53.874 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file runtime-errors.log
+17:40:53.876 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file progress-statistics.log
+17:40:53.889 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file alerts.log
+17:40:53.899 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file crawl.log
+17:40:53.909 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file uri-errors.log
+17:40:53.911 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file nonfatal-errors.log
+17:40:53.911 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/crawler-beans.cxml 28742
+17:40:53.917 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/harvestInfo.xml 585
+17:40:53.918 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/seeds.txt 24
+17:40:53.920 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/archivefiles-report.txt 130
+17:40:53.922 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/crawl-report.txt 332
+17:40:53.923 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/frontier-summary-report.txt 11913
+17:40:53.925 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/hosts-report.txt 5624
+17:40:53.927 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/mimetype-report.txt 605
+17:40:53.929 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/processors-report.txt 3275
+17:40:53.930 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/responsecode-report.txt 65
+17:40:53.932 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/seeds-report.txt 128
+17:40:53.933 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/source-report.txt 1139
+17:40:53.935 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/latest/reports/threads-report.txt 13
+17:40:53.937 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/logs/alerts.log 0
+17:40:53.938 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/logs/crawl.log 320664
+17:40:53.944 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3_err.log 4718
+17:40:53.946 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3_out.log 364269
+17:40:53.953 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix_out.log 1098
+17:40:53.955 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/job.log 450
+17:40:53.957 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/logs/nonfatal-errors.log 0
+17:40:53.958 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/logs/progress-statistics.log 8768
+17:40:53.960 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/logs/runtime-errors.log 0
+17:40:53.962 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/logs/scope.log 3108440
+17:40:54.008 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/heritrix3/jobs/6_1477585453683/logs/uri-errors.log 0
+17:40:54.013 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for files not having harvestprefix '6-6'
+17:40:54.025 INFO  d.n.c.utils.batch.BatchLocalFiles - The batchjob 'class dk.netarkivet.common.utils.cdx.ArchiveExtractCDXJob' has run for 0 seconds and has reached file '6-6-20161027162549350-00000-ciblee_2015_harvester-1.warc', which is number 1 out of 1
+17:40:54.026 INFO  d.n.c.utils.archive.ArchiveBatchJob - Processing archive file: 6-6-20161027162549350-00000-ciblee_2015_harvester-1.warc
+17:40:57.917 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/6_1477585453683/tmp-meta/cdx7180768038214133131.tmp/6-6-20161027162549350-00000-ciblee_2015_harvester-1.warc.cdx 229194
+17:40:57.928 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '6-6-20161027162549350-00000-ciblee_2015_harvester-1.warc' to arcrepository.
+17:41:00.216 INFO  d.n.h.heritrix3.PostProcessing - File '6-6-20161027162549350-00000-ciblee_2015_harvester-1.warc' uploaded successfully to arcrepository.
+17:41:00.217 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '6-metadata-1.warc' to arcrepository.
+17:41:00.674 INFO  d.n.h.heritrix3.PostProcessing - File '6-metadata-1.warc' uploaded successfully to arcrepository.
+17:41:00.688 INFO  d.n.h.h.r.HarvestReportGenerator - Starting pre-processing of harvest report for job 6
+17:41:00.690 INFO  d.n.h.h.r.HarvestReportGenerator - DISREGARD_SEEDURL_INFORMATION_IN_CRAWLLOG: false
+17:41:02.113 INFO  d.n.h.h.r.HarvestReportGenerator - Finished pre-processing of harvest report for job 6, operation took 00d 00:23:45
+17:41:02.121 INFO  d.n.h.heritrix3.PostProcessing - Job with ID 6 finished with status DONE
+17:41:02.132 INFO  d.n.h.heritrix3.PostProcessing - Deleting final logs
+17:41:02.135 INFO  d.n.h.heritrix3.PostProcessing - Cleanup after harvesting job with id '6' and moving the rest of the job to oldjobsdir 'oldjobs' 
+17:41:02.149 INFO  d.n.h.heritrix3.PostProcessing - Done post-processing files for job 6 in dir: '/home/test/IMRT/harvester_focused/6_1477585453683'
+17:41:02.150 INFO  d.n.h.h.HarvestControllerServer - Ending crawl of job : 6
+17:41:02.151 INFO  d.n.h.heritrix3.PostProcessing - Looking for unprocessed crawldata in 'harvester_focused'
+17:41:02.152 WARN  d.n.h.heritrix3.PostProcessing - Found old unprocessed job data in dir '/home/test/IMRT/harvester_focused/2_1477585444646'. Crawl probably interrupted by shutdown of HarvestController. Processing data.
+17:41:02.382 ERROR d.n.common.utils.EMailNotifications - Mailing NetarchiveSuite-WARNING: Found old unprocessed job data in dir '/home/test/IMRT/harvester_focused/2_1477585444646'. Crawl probably interrupted by shutdown of HarvestController. Processing data.
+17:41:02.422 INFO  d.n.h.heritrix3.PostProcessing - Store files in directory 'harvester_focused/2_1477585444646' from jobID: 2.
+17:41:02.423 INFO  d.n.h.heritrix3.PostProcessing - Store the files from harvest in 'harvester_focused/2_1477585444646'
+17:41:07.455 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for heritrix files in the following directories: /home/test/IMRT/harvester_focused/2_1477585444646,/home/test/IMRT/harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646, /home/test/IMRT/harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/latest/reports
+17:41:07.470 WARN  d.n.h.heritrix3.HarvestDocumentation - The directory /home/test/IMRT/harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/latest/reports does not exist
+17:41:07.477 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file scope.log
+17:41:07.479 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file runtime-errors.log
+17:41:07.482 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file progress-statistics.log
+17:41:07.485 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file alerts.log
+17:41:07.486 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file crawl.log
+17:41:07.488 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file uri-errors.log
+17:41:07.491 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file nonfatal-errors.log
+17:41:07.491 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/crawler-beans.cxml 28742
+17:41:07.493 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/harvestInfo.xml 585
+17:41:07.494 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/seeds.txt 24
+17:41:07.496 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/archivefiles-report.txt 39
+17:41:07.498 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/logs/alerts.log 0
+17:41:07.503 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/logs/crawl.log 404654
+17:41:07.510 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3_err.log 0
+17:41:07.512 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3_out.log 425984
+17:41:07.519 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix_out.log 1098
+17:41:07.524 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/job.log 218
+17:41:07.530 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/logs/nonfatal-errors.log 0
+17:41:07.533 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/logs/progress-statistics.log 8814
+17:41:07.534 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/logs/runtime-errors.log 0
+17:41:07.536 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/logs/scope.log 3302849
+17:41:07.648 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/logs/uri-errors.log 0
+17:41:07.651 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for files not having harvestprefix '2-5'
+17:41:07.655 WARN  d.n.common.utils.cdx.CDXUtils - Found no related arcfiles to process in the archive dir '/home/test/IMRT/harvester_focused/2_1477585444646/heritrix3/jobs/2_1477585444646/latest/warcs'.
+17:41:07.660 WARN  d.n.h.heritrix3.PostProcessing - Probable error in Heritrix job setup. No arcfiles or warcfiles generated by Heritrix for job 2
+17:41:07.766 ERROR d.n.common.utils.EMailNotifications - Mailing NetarchiveSuite-WARNING: Probable error in Heritrix job setup. No arcfiles or warcfiles generated by Heritrix for job 2
+17:41:07.767 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '2-metadata-1.warc' to arcrepository.
+17:41:08.240 INFO  d.n.h.heritrix3.PostProcessing - File '2-metadata-1.warc' uploaded successfully to arcrepository.
+17:41:08.245 INFO  d.n.h.h.r.HarvestReportGenerator - Starting pre-processing of harvest report for job 2
+17:41:08.247 INFO  d.n.h.h.r.HarvestReportGenerator - DISREGARD_SEEDURL_INFORMATION_IN_CRAWLLOG: false
+17:41:09.428 INFO  d.n.h.h.r.HarvestReportGenerator - Finished pre-processing of harvest report for job 2, operation took 00d 00:19:43
+17:41:09.433 WARN  d.n.h.heritrix3.PostProcessing - Job with ID 2 finished with status FAILED
+17:41:09.447 INFO  d.n.h.heritrix3.PostProcessing - Cleanup after harvesting job with id '2' and moving the rest of the job to oldjobsdir 'oldjobs' 
+17:41:09.492 INFO  d.n.h.heritrix3.PostProcessing - Done post-processing files for job 2 in dir: '/home/test/IMRT/harvester_focused/2_1477585444646'
+17:41:09.498 WARN  d.n.h.heritrix3.PostProcessing - Found old unprocessed job data in dir '/home/test/IMRT/harvester_focused/1_1477585444471'. Crawl probably interrupted by shutdown of HarvestController. Processing data.
+17:41:09.535 ERROR d.n.common.utils.EMailNotifications - Mailing NetarchiveSuite-WARNING: Found old unprocessed job data in dir '/home/test/IMRT/harvester_focused/1_1477585444471'. Crawl probably interrupted by shutdown of HarvestController. Processing data.
+17:41:09.585 INFO  d.n.h.heritrix3.PostProcessing - Store files in directory 'harvester_focused/1_1477585444471' from jobID: 1.
+17:41:09.589 INFO  d.n.h.heritrix3.PostProcessing - Store the files from harvest in 'harvester_focused/1_1477585444471'
+17:41:14.609 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for heritrix files in the following directories: /home/test/IMRT/harvester_focused/1_1477585444471,/home/test/IMRT/harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471, /home/test/IMRT/harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/latest/reports
+17:41:14.622 WARN  d.n.h.heritrix3.HarvestDocumentation - The directory /home/test/IMRT/harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/latest/reports does not exist
+17:41:14.628 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file scope.log
+17:41:14.633 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file runtime-errors.log
+17:41:14.634 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file progress-statistics.log
+17:41:14.636 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file alerts.log
+17:41:14.637 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file crawl.log
+17:41:14.638 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file uri-errors.log
+17:41:14.640 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file nonfatal-errors.log
+17:41:14.640 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/crawler-beans.cxml 28742
+17:41:14.642 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/harvestInfo.xml 585
+17:41:14.643 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/seeds.txt 24
+17:41:14.644 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/archivefiles-report.txt 39
+17:41:14.645 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/logs/alerts.log 0
+17:41:14.646 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/logs/crawl.log 348320
+17:41:14.653 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3_err.log 0
+17:41:14.654 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3_out.log 450560
+17:41:14.662 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix_out.log 1098
+17:41:14.663 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/job.log 218
+17:41:14.664 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/logs/nonfatal-errors.log 0
+17:41:14.665 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/logs/progress-statistics.log 8814
+17:41:14.666 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/logs/runtime-errors.log 0
+17:41:14.667 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/logs/scope.log 3333171
+17:41:14.716 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/logs/uri-errors.log 108
+17:41:14.720 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for files not having harvestprefix '1-1'
+17:41:14.721 WARN  d.n.common.utils.cdx.CDXUtils - Found no related arcfiles to process in the archive dir '/home/test/IMRT/harvester_focused/1_1477585444471/heritrix3/jobs/1_1477585444471/latest/warcs'.
+17:41:14.725 WARN  d.n.h.heritrix3.PostProcessing - Probable error in Heritrix job setup. No arcfiles or warcfiles generated by Heritrix for job 1
+17:41:14.781 ERROR d.n.common.utils.EMailNotifications - Mailing NetarchiveSuite-WARNING: Probable error in Heritrix job setup. No arcfiles or warcfiles generated by Heritrix for job 1
+17:41:14.781 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '1-metadata-1.warc' to arcrepository.
+17:41:15.336 INFO  d.n.h.heritrix3.PostProcessing - File '1-metadata-1.warc' uploaded successfully to arcrepository.
+17:41:15.338 INFO  d.n.h.h.r.HarvestReportGenerator - Starting pre-processing of harvest report for job 1
+17:41:15.345 INFO  d.n.h.h.r.HarvestReportGenerator - DISREGARD_SEEDURL_INFORMATION_IN_CRAWLLOG: false
+17:41:15.737 INFO  d.n.h.h.r.HarvestReportGenerator - Finished pre-processing of harvest report for job 1, operation took 00d 00:06:38
+17:41:15.741 WARN  d.n.h.heritrix3.PostProcessing - Job with ID 1 finished with status FAILED
+17:41:15.747 INFO  d.n.h.heritrix3.PostProcessing - Cleanup after harvesting job with id '1' and moving the rest of the job to oldjobsdir 'oldjobs' 
+17:41:15.754 INFO  d.n.h.heritrix3.PostProcessing - Done post-processing files for job 1 in dir: '/home/test/IMRT/harvester_focused/1_1477585444471'
+17:41:15.755 WARN  d.n.h.heritrix3.PostProcessing - Found old unprocessed job data in dir '/home/test/IMRT/harvester_focused/5_1477585453196'. Crawl probably interrupted by shutdown of HarvestController. Processing data.
+17:41:15.774 ERROR d.n.common.utils.EMailNotifications - Mailing NetarchiveSuite-WARNING: Found old unprocessed job data in dir '/home/test/IMRT/harvester_focused/5_1477585453196'. Crawl probably interrupted by shutdown of HarvestController. Processing data.
+17:41:15.798 INFO  d.n.h.heritrix3.PostProcessing - Store files in directory 'harvester_focused/5_1477585453196' from jobID: 5.
+17:41:15.798 INFO  d.n.h.heritrix3.PostProcessing - Store the files from harvest in 'harvester_focused/5_1477585453196'
+17:41:20.810 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for heritrix files in the following directories: /home/test/IMRT/harvester_focused/5_1477585453196,/home/test/IMRT/harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196, /home/test/IMRT/harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/latest/reports
+17:41:20.843 WARN  d.n.h.heritrix3.HarvestDocumentation - The directory /home/test/IMRT/harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/latest/reports does not exist
+17:41:20.868 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file scope.log
+17:41:20.870 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file runtime-errors.log
+17:41:20.880 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file progress-statistics.log
+17:41:20.881 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file alerts.log
+17:41:20.883 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file crawl.log
+17:41:20.892 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file uri-errors.log
+17:41:20.894 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file nonfatal-errors.log
+17:41:20.895 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/crawler-beans.cxml 28742
+17:41:20.904 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/harvestInfo.xml 585
+17:41:20.906 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/seeds.txt 24
+17:41:20.913 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/archivefiles-report.txt 39
+17:41:20.914 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/logs/alerts.log 0
+17:41:20.915 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/logs/crawl.log 142135
+17:41:20.928 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3_err.log 0
+17:41:20.937 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3_out.log 180224
+17:41:20.945 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix_out.log 1098
+17:41:20.946 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/job.log 218
+17:41:20.947 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/logs/nonfatal-errors.log 0
+17:41:20.953 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/logs/progress-statistics.log 8814
+17:41:20.960 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/logs/runtime-errors.log 0
+17:41:20.961 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/logs/scope.log 1238382
+17:41:21.014 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/logs/uri-errors.log 0
+17:41:21.018 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for files not having harvestprefix '5-3'
+17:41:21.019 WARN  d.n.common.utils.cdx.CDXUtils - Found no related arcfiles to process in the archive dir '/home/test/IMRT/harvester_focused/5_1477585453196/heritrix3/jobs/5_1477585453196/latest/warcs'.
+17:41:21.021 WARN  d.n.h.heritrix3.PostProcessing - Probable error in Heritrix job setup. No arcfiles or warcfiles generated by Heritrix for job 5
+17:41:21.043 ERROR d.n.common.utils.EMailNotifications - Mailing NetarchiveSuite-WARNING: Probable error in Heritrix job setup. No arcfiles or warcfiles generated by Heritrix for job 5
+17:41:21.044 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '5-metadata-1.warc' to arcrepository.
+17:41:21.561 INFO  d.n.h.heritrix3.PostProcessing - File '5-metadata-1.warc' uploaded successfully to arcrepository.
+17:41:21.564 INFO  d.n.h.h.r.HarvestReportGenerator - Starting pre-processing of harvest report for job 5
+17:41:21.566 INFO  d.n.h.h.r.HarvestReportGenerator - DISREGARD_SEEDURL_INFORMATION_IN_CRAWLLOG: false
+17:41:21.656 INFO  d.n.h.h.r.HarvestReportGenerator - Finished pre-processing of harvest report for job 5, operation took 00d 00:01:32
+17:41:21.658 WARN  d.n.h.heritrix3.PostProcessing - Job with ID 5 finished with status FAILED
+17:41:21.671 INFO  d.n.h.heritrix3.PostProcessing - Cleanup after harvesting job with id '5' and moving the rest of the job to oldjobsdir 'oldjobs' 
+17:41:21.675 INFO  d.n.h.heritrix3.PostProcessing - Done post-processing files for job 5 in dir: '/home/test/IMRT/harvester_focused/5_1477585453196'
+17:41:21.677 INFO  d.n.h.h.HarvestControllerServer - Starts to listen to new jobs on queue '[Queue 'IMRT_COMMON_JOB_PARTIAL_FOCUSED']'
+17:43:04.176 INFO  d.n.h.h.HarvestControllerServer - Received crawlrequest for job 11: 'ID:576-192.168.1.51(f7:db:b0:a7:73:6a)-50634-1477586632553: To IMRT_COMMON_JOB_PARTIAL_FOCUSED ReplyTo IMRT_COMMON_ERROR OK Job: Job 11 (state = SUBMITTED, HD = 3, channel = FOCUSED, snapshot = false, forcemaxcount = -1, forcemaxbytes = 1000000000, forcemaxrunningtime = 0, orderxml = default_orderxml, numconfigs = 1, created = null, submitted = Thu Oct 27 17:43:52 CET 2016), metadata: [URL= metadata://netarkivet.dk/crawl/setup/duplicatereductionjobs?majorversion=1&minorversion=0&harvestid=3&harvestnum=0&jobid=11 ; mimetype= text/plain ; data= ]'
+17:43:04.181 INFO  d.n.h.h.HarvestControllerServer - Started harvester thread for job 11
+17:43:04.184 INFO  d.n.common.distribute.JMSConnection - Removing listener from channel 'IMRT_COMMON_JOB_PARTIAL_FOCUSED'
+17:43:04.191 INFO  d.n.harvester.heritrix3.HarvestJob - Created crawl directory: 'harvester_focused/11_1477586584190'
+17:43:04.211 INFO  d.n.h.indexserver.FileBasedCache - Generated index '/home/test/IMRT/cache/DEDUP_CRAWL_LOG/empty-cache' of id '[]', request was for '[]'
+17:43:04.211 INFO  d.n.harvester.heritrix3.HarvestJob - Starting crawl of job : 11
+17:43:04.213 INFO  d.n.h.h.HeritrixLauncherAbstract - Make the template ready for Heritrix3
+17:43:04.219 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix for job 11 of harvest 3 in harvester_focused/11_1477586584190 in crawldir harvester_focused/11_1477586584190
+17:43:06.192 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix3 with the following arguments:./bin/heritrix -b harvester-1 -p  8196 -a  admin:adminPassword -s h3server.jks,h3server,h3server 
+17:43:06.193 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting FOREGROUND to 'true'
+17:43:06.196 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting JAVA_OPTS to '-Xmx1598M  -Ddk.netarkivet.settings.file=/home/test/IMRT/conf/settings_HarvestControllerApplication_focused4.xml'
+17:43:06.197 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting HERITRIX_OUT to '/home/test/IMRT/harvester_focused/11_1477586584190/heritrix_out.log'
+17:43:06.197 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting output from heritrix3 to 'harvester_focused/11_1477586584190/heritrix3_out.log', and errors to 'harvester_focused/11_1477586584190/heritrix3_err.log'
+17:43:06.206 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine launched successfully
+17:43:12.281 INFO  d.n.h.h.c.HeritrixController - Heritrix3 REST interface up and running
+17:43:12.282 INFO  d.n.h.h.c.HeritrixController - Copying the crawler-beans.cxml file and seeds.txt to the heritrix3 jobdir 'harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190'
+17:43:12.653 INFO  d.n.h.h.c.HeritrixController - H3 jobs available for building: 11_1477586584190 
+17:43:20.181 INFO  d.n.h.h.c.HeritrixController - Job 11_1477586584190 built successfully
+17:43:20.408 INFO  d.n.h.h.c.HeritrixController - The H3 job 11_1477586584190 in now in state CrawlControllerState.NASCENT
+17:44:26.845 WARN  d.n.h.h.c.HeritrixController - The job state is now RUNNING. Should have been CrawlControllerState.PAUSED
+17:44:26.906 INFO  d.n.h.h.c.HeritrixController - The job 11_1477586584190 is now in state RUNNING
+17:44:26.906 INFO  d.n.h.h.controller.HeritrixLauncher - Starting periodic CrawlControl with CRAWL_CONTROL_WAIT_PERIOD=20 seconds
+17:44:27.005 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:44:27.011 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:44:27.011 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 33.64055299539171%
+17:44:47.043 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:44:47.048 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:44:47.049 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 43.347639484978544%
+17:45:07.085 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:45:07.098 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:45:07.099 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 49.056603773584904%
+17:45:27.147 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:45:27.156 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:45:27.156 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 59.86622073578595%
+17:45:47.217 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:45:47.228 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:45:47.228 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 49.31506849315068%
+17:46:07.258 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:46:07.263 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:46:07.263 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 52.30125523012552%
+17:46:27.304 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:46:27.311 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:46:27.312 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 54.563894523326574%
+17:46:47.342 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:46:47.347 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:46:47.347 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 56.42023346303502%
+17:47:07.384 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:47:07.389 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:47:07.390 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 54.49826989619377%
+17:47:27.443 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:47:27.453 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:47:27.454 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 54.60420032310178%
+17:47:47.486 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:47:47.491 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:47:47.492 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 56.69291338582677%
+17:48:07.522 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:48:07.527 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:48:07.528 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 57.0162481536189%
+17:48:27.565 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:48:27.571 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:48:27.572 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 60.23391812865497%
+17:48:47.603 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:48:47.608 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:48:47.609 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 53.225806451612904%
+17:49:07.663 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:49:07.679 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:49:07.680 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 45.32803180914513%
+17:49:27.710 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:49:27.715 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:49:27.715 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 49.85163204747774%
+17:49:47.746 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:49:47.752 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:49:47.752 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 52.87356321839081%
+17:50:07.788 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:50:07.792 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:50:07.793 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 52.57548845470693%
+17:50:27.824 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:50:27.829 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:50:27.830 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 53.624454148471614%
+17:50:47.859 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:50:47.864 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:50:47.864 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 55.4019014693172%
+17:51:07.920 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:51:07.925 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:51:07.926 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 58.757549611734255%
+17:51:27.954 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:51:27.964 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:51:27.966 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 60.891938250428815%
+17:51:48.006 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:51:48.011 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:51:48.012 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 61.836562763268745%
+17:52:08.069 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:52:08.078 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:52:08.078 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 62.28287841191067%
+17:52:28.109 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:52:28.114 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:52:28.114 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 62.9780309194467%
+17:52:48.160 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:52:48.170 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:52:48.171 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 65.25630593978845%
+17:53:08.216 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:53:08.221 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:53:08.222 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 67.860048820179%
+17:53:28.275 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:53:28.280 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:53:28.280 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 70.48780487804878%
+17:53:48.356 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:53:48.361 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:53:48.361 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 72.76422764227642%
+17:54:08.469 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:54:08.489 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:54:08.489 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 76.25607779578606%
+17:54:28.526 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:54:28.531 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:54:28.532 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 80.7785888077859%
+17:54:48.573 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:54:48.578 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:54:48.578 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 85.17017828200973%
+17:55:08.649 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:55:08.662 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:55:08.662 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 89.4566098945661%
+17:55:28.720 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:55:28.726 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:55:28.727 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 91.75257731958763%
+17:55:48.795 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:55:48.800 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:55:48.801 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 85.76642335766424%
+17:56:08.877 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:56:08.891 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:56:08.891 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 85.4493580599144%
+17:56:28.991 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:56:29.011 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:56:29.011 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 86.47686832740213%
+17:56:49.084 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:56:49.094 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:56:49.095 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 87.44710860366713%
+17:57:09.177 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:57:09.195 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:57:09.196 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 88.49372384937239%
+17:57:29.309 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:57:29.324 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:57:29.328 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 90.12517385257301%
+17:57:49.390 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:57:49.395 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:57:49.396 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 91.81692094313453%
+17:58:09.456 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:58:09.464 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:58:09.464 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 93.3609958506224%
+17:58:29.524 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:58:29.534 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:58:29.535 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 94.9000689179876%
+17:58:49.595 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:58:49.622 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:58:49.623 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 96.22252747252747%
+17:59:09.698 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:59:09.706 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:59:09.707 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 97.40791268758527%
+17:59:29.775 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:59:29.781 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:59:29.782 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 97.57412398921834%
+17:59:49.855 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 11. Considering the crawl to be not finished
+17:59:49.866 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:59:49.866 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 11, Harvest ID: 3, https://harvester-1:8196/engine
+null
+RUNNING 98.85906040268456%
+18:00:09.956 INFO  d.n.h.h.d.CrawlProgressMessage - Job 11 seems to be no longer in progress. 
+18:00:09.968 INFO  d.n.h.h.d.CrawlProgressMessage - Job 11 seems to be no longer in progress. 
+18:00:09.969 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID 11: crawl is finished.
+18:00:09.969 INFO  d.n.h.h.controller.HeritrixLauncher - CrawlJob is now over
+18:00:10.061 INFO  d.n.h.h.c.HeritrixController - Tearing down h3 job 11_1477586584190
+18:00:10.861 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine shutdown was successful. ExitValue =  0
+18:00:10.869 INFO  d.n.h.heritrix3.PostProcessing - Store files in directory 'harvester_focused/11_1477586584190' from jobID: 11.
+18:00:10.870 INFO  d.n.h.heritrix3.PostProcessing - Store the files from harvest in 'harvester_focused/11_1477586584190'
+18:00:15.880 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for heritrix files in the following directories: /home/test/IMRT/harvester_focused/11_1477586584190,/home/test/IMRT/harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190, /home/test/IMRT/harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports
+18:00:15.907 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file scope.log
+18:00:15.908 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file runtime-errors.log
+18:00:15.909 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file progress-statistics.log
+18:00:15.911 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file alerts.log
+18:00:15.912 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file crawl.log
+18:00:15.913 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file uri-errors.log
+18:00:15.914 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file nonfatal-errors.log
+18:00:15.915 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/crawler-beans.cxml 28745
+18:00:15.916 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/harvestInfo.xml 587
+18:00:15.918 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/seeds.txt 24
+18:00:15.919 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/archivefiles-report.txt 131
+18:00:15.920 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/crawl-report.txt 331
+18:00:15.921 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/frontier-summary-report.txt 12211
+18:00:15.922 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/hosts-report.txt 7282
+18:00:15.923 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/mimetype-report.txt 695
+18:00:15.924 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/processors-report.txt 3076
+18:00:15.925 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/responsecode-report.txt 67
+18:00:15.926 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/seeds-report.txt 128
+18:00:15.927 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/source-report.txt 793
+18:00:15.928 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/latest/reports/threads-report.txt 13
+18:00:15.929 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/logs/alerts.log 0
+18:00:15.930 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/logs/crawl.log 479539
+18:00:15.938 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3_err.log 4738
+18:00:15.939 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3_out.log 689983
+18:00:15.950 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix_out.log 1098
+18:00:15.951 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/job.log 450
+18:00:15.952 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/logs/nonfatal-errors.log 0
+18:00:15.953 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/logs/progress-statistics.log 9480
+18:00:15.954 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/logs/runtime-errors.log 0
+18:00:15.955 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/logs/scope.log 4084646
+18:00:16.012 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/heritrix3/jobs/11_1477586584190/logs/uri-errors.log 4250
+18:00:16.015 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for files not having harvestprefix '11-3'
+18:00:16.017 INFO  d.n.c.utils.batch.BatchLocalFiles - The batchjob 'class dk.netarkivet.common.utils.cdx.ArchiveExtractCDXJob' has run for 0 seconds and has reached file '11-3-20161027164326257-00000-ciblee_2015_harvester-1.warc', which is number 1 out of 1
+18:00:16.018 INFO  d.n.c.utils.archive.ArchiveBatchJob - Processing archive file: 11-3-20161027164326257-00000-ciblee_2015_harvester-1.warc
+18:00:18.517 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/11_1477586584190/tmp-meta/cdx7168562019740123334.tmp/11-3-20161027164326257-00000-ciblee_2015_harvester-1.warc.cdx 329041
+18:00:18.532 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '11-3-20161027164326257-00000-ciblee_2015_harvester-1.warc' to arcrepository.
+18:00:20.533 INFO  d.n.h.heritrix3.PostProcessing - File '11-3-20161027164326257-00000-ciblee_2015_harvester-1.warc' uploaded successfully to arcrepository.
+18:00:20.533 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '11-metadata-1.warc' to arcrepository.
+18:00:20.967 INFO  d.n.h.heritrix3.PostProcessing - File '11-metadata-1.warc' uploaded successfully to arcrepository.
+18:00:20.968 INFO  d.n.h.h.r.HarvestReportGenerator - Starting pre-processing of harvest report for job 11
+18:00:20.970 INFO  d.n.h.h.r.HarvestReportGenerator - DISREGARD_SEEDURL_INFORMATION_IN_CRAWLLOG: false
+18:00:21.441 INFO  d.n.h.h.r.HarvestReportGenerator - Finished pre-processing of harvest report for job 11, operation took 00d 00:07:53
+18:00:21.443 INFO  d.n.h.heritrix3.PostProcessing - Job with ID 11 finished with status DONE
+18:00:21.453 INFO  d.n.h.heritrix3.PostProcessing - Deleting final logs
+18:00:21.455 INFO  d.n.h.heritrix3.PostProcessing - Cleanup after harvesting job with id '11' and moving the rest of the job to oldjobsdir 'oldjobs' 
+18:00:21.464 INFO  d.n.h.heritrix3.PostProcessing - Done post-processing files for job 11 in dir: '/home/test/IMRT/harvester_focused/11_1477586584190'
+18:00:21.464 INFO  d.n.h.h.HarvestControllerServer - Ending crawl of job : 11
+18:00:21.465 INFO  d.n.h.heritrix3.PostProcessing - Looking for unprocessed crawldata in 'harvester_focused'
+18:00:21.466 INFO  d.n.h.h.HarvestControllerServer - Starts to listen to new jobs on queue '[Queue 'IMRT_COMMON_JOB_PARTIAL_FOCUSED']'
+18:00:34.192 INFO  d.n.h.h.HarvestControllerServer - Received crawlrequest for job 13: 'ID:755-192.168.1.51(f7:db:b0:a7:73:6a)-50634-1477587682586: To IMRT_COMMON_JOB_PARTIAL_FOCUSED ReplyTo IMRT_COMMON_ERROR OK Job: Job 13 (state = SUBMITTED, HD = 7, channel = FOCUSED, snapshot = false, forcemaxcount = -1, forcemaxbytes = 1000000000, forcemaxrunningtime = 0, orderxml = default_orderxml, numconfigs = 1, created = null, submitted = Thu Oct 27 18:01:22 CET 2016), metadata: [URL= metadata://netarkivet.dk/crawl/setup/duplicatereductionjobs?majorversion=1&minorversion=0&harvestid=7&harvestnum=0&jobid=13 ; mimetype= text/plain ; data= ]'
+18:00:34.196 INFO  d.n.h.h.HarvestControllerServer - Started harvester thread for job 13
+18:00:34.200 INFO  d.n.common.distribute.JMSConnection - Removing listener from channel 'IMRT_COMMON_JOB_PARTIAL_FOCUSED'
+18:00:34.205 INFO  d.n.harvester.heritrix3.HarvestJob - Created crawl directory: 'harvester_focused/13_1477587634204'
+18:00:34.224 INFO  d.n.h.indexserver.FileBasedCache - Generated index '/home/test/IMRT/cache/DEDUP_CRAWL_LOG/empty-cache' of id '[]', request was for '[]'
+18:00:34.224 INFO  d.n.harvester.heritrix3.HarvestJob - Starting crawl of job : 13
+18:00:34.226 INFO  d.n.h.h.HeritrixLauncherAbstract - Make the template ready for Heritrix3
+18:00:34.238 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix for job 13 of harvest 7 in harvester_focused/13_1477587634204 in crawldir harvester_focused/13_1477587634204
+18:00:36.172 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix3 with the following arguments:./bin/heritrix -b harvester-1 -p  8196 -a  admin:adminPassword -s h3server.jks,h3server,h3server 
+18:00:36.173 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting FOREGROUND to 'true'
+18:00:36.176 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting JAVA_OPTS to '-Xmx1598M  -Ddk.netarkivet.settings.file=/home/test/IMRT/conf/settings_HarvestControllerApplication_focused4.xml'
+18:00:36.176 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting HERITRIX_OUT to '/home/test/IMRT/harvester_focused/13_1477587634204/heritrix_out.log'
+18:00:36.177 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting output from heritrix3 to 'harvester_focused/13_1477587634204/heritrix3_out.log', and errors to 'harvester_focused/13_1477587634204/heritrix3_err.log'
+18:00:36.185 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine launched successfully
+18:00:41.711 INFO  d.n.h.h.c.HeritrixController - Heritrix3 REST interface up and running
+18:00:41.712 INFO  d.n.h.h.c.HeritrixController - Copying the crawler-beans.cxml file and seeds.txt to the heritrix3 jobdir 'harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204'
+18:00:42.081 INFO  d.n.h.h.c.HeritrixController - H3 jobs available for building: 13_1477587634204 
+18:00:48.569 INFO  d.n.h.h.c.HeritrixController - Job 13_1477587634204 built successfully
+18:00:48.861 INFO  d.n.h.h.c.HeritrixController - The H3 job 13_1477587634204 in now in state CrawlControllerState.NASCENT
+18:01:54.667 WARN  d.n.h.h.c.HeritrixController - The job state is now RUNNING. Should have been CrawlControllerState.PAUSED
+18:01:54.733 INFO  d.n.h.h.c.HeritrixController - The job 13_1477587634204 is now in state RUNNING
+18:01:54.733 INFO  d.n.h.h.controller.HeritrixLauncher - Starting periodic CrawlControl with CRAWL_CONTROL_WAIT_PERIOD=20 seconds
+18:01:54.810 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:01:54.819 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:01:54.820 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 31.192660550458715%
+18:02:14.857 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:02:14.872 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:02:14.873 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 44.30379746835443%
+18:02:34.999 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:02:35.018 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:02:35.019 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 49.642857142857146%
+18:02:55.050 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:02:55.055 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:02:55.056 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 61.58730158730159%
+18:03:15.114 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:03:15.127 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:03:15.128 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 60.3399433427762%
+18:03:35.156 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:03:35.161 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:03:35.161 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 62.340966921119595%
+18:03:55.190 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:03:55.198 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:03:55.199 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 65.35626535626535%
+18:04:15.234 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:04:15.247 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:04:15.248 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 66.43026004728132%
+18:04:35.278 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:04:35.283 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:04:35.284 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 65.2542372881356%
+18:04:55.312 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:04:55.318 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:04:55.324 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 61.95856873822976%
+18:05:15.364 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:05:15.369 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:05:15.369 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 64.45672191528546%
+18:05:35.425 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:05:35.433 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:05:35.438 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 64.86013986013987%
+18:05:55.476 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:05:55.482 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:05:55.483 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 66.38655462184875%
+18:06:15.533 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:06:15.537 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:06:15.540 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 69.05158069883528%
+18:06:35.568 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:06:35.574 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:06:35.574 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 69.64856230031948%
+18:06:55.634 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:06:55.646 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:06:55.647 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 71.60686427457098%
+18:07:15.675 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:07:15.679 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:07:15.680 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 66.80161943319838%
+18:07:35.708 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:07:35.713 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:07:35.714 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 67.53585397653194%
+18:07:55.743 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:07:55.747 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:07:55.748 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 70.24579560155239%
+18:08:15.777 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:08:15.781 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:08:15.782 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 74.3225806451613%
+18:08:35.813 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:08:35.818 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:08:35.818 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 78.24967824967825%
+18:08:55.864 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:08:55.869 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:08:55.869 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 79.24528301886792%
+18:09:15.907 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:09:15.912 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:09:15.912 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 79.65686274509804%
+18:09:35.947 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:09:35.954 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:09:35.954 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 79.97630331753554%
+18:09:55.989 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:09:55.993 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:09:55.994 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 62.56544502617801%
+18:10:16.022 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:10:16.027 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:10:16.028 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 66.40759930915371%
+18:10:36.055 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:10:36.060 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:10:36.060 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 64.36688311688312%
+18:10:56.088 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:10:56.093 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:10:56.093 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 62.4712202609363%
+18:11:16.120 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:11:16.125 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:11:16.125 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 63.80228136882129%
+18:11:36.154 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:11:36.159 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:11:36.160 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 64.77272727272727%
+18:11:56.186 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:11:56.191 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:11:56.191 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 65.27570789865872%
+18:12:16.220 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:12:16.225 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:12:16.225 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 68.47583643122677%
+18:12:36.263 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:12:36.267 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:12:36.268 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 71.49220489977728%
+18:12:56.296 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:12:56.301 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:12:56.302 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 74.40652818991099%
+18:13:16.349 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:13:16.354 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:13:16.354 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 77.11111111111111%
+18:13:36.385 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:13:36.390 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:13:36.390 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 80.07407407407408%
+18:13:56.425 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:13:56.431 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:13:56.431 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 83.19763138415988%
+18:14:16.464 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:14:16.469 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:14:16.470 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 86.15840118430792%
+18:14:36.499 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:14:36.504 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:14:36.505 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 88.18316100443131%
+18:14:56.546 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:14:56.556 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:14:56.557 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 89.8379970544919%
+18:15:16.585 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:15:16.589 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:15:16.589 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 91.04258443465491%
+18:15:36.621 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:15:36.626 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:15:36.626 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 92.4597364568082%
+18:15:56.652 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:15:56.657 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:15:56.658 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 93.94160583941606%
+18:16:16.698 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:16:16.704 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:16:16.704 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 95.41484716157206%
+18:16:36.738 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:16:36.743 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:16:36.744 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 96.88856729377713%
+18:16:56.771 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:16:56.775 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:16:56.776 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 97.49283667621776%
+18:17:16.803 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 13. Considering the crawl to be not finished
+18:17:16.808 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+18:17:16.808 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 13, Harvest ID: 7, https://harvester-1:8196/engine
+null
+RUNNING 97.87234042553192%
+18:17:36.838 INFO  d.n.h.h.d.CrawlProgressMessage - Job 13 seems to be no longer in progress. 
+18:17:36.847 INFO  d.n.h.h.d.CrawlProgressMessage - Job 13 seems to be no longer in progress. 
+18:17:36.847 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID 13: crawl is finished.
+18:17:36.847 INFO  d.n.h.h.controller.HeritrixLauncher - CrawlJob is now over
+18:17:36.900 INFO  d.n.h.h.c.HeritrixController - Tearing down h3 job 13_1477587634204
+18:17:37.635 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine shutdown was successful. ExitValue =  0
+18:17:37.641 INFO  d.n.h.heritrix3.PostProcessing - Store files in directory 'harvester_focused/13_1477587634204' from jobID: 13.
+18:17:37.641 INFO  d.n.h.heritrix3.PostProcessing - Store the files from harvest in 'harvester_focused/13_1477587634204'
+18:17:42.652 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for heritrix files in the following directories: /home/test/IMRT/harvester_focused/13_1477587634204,/home/test/IMRT/harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204, /home/test/IMRT/harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports
+18:17:42.673 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file scope.log
+18:17:42.674 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file runtime-errors.log
+18:17:42.675 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file progress-statistics.log
+18:17:42.676 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file alerts.log
+18:17:42.677 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file crawl.log
+18:17:42.678 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file uri-errors.log
+18:17:42.680 INFO  d.n.h.heritrix3.HarvestDocumentation - Found Heritrix log file nonfatal-errors.log
+18:17:42.680 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/crawler-beans.cxml 28745
+18:17:42.681 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/harvestInfo.xml 587
+18:17:42.682 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/seeds.txt 24
+18:17:42.683 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/archivefiles-report.txt 131
+18:17:42.684 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/crawl-report.txt 332
+18:17:42.685 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/frontier-summary-report.txt 12105
+18:17:42.686 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/hosts-report.txt 7810
+18:17:42.687 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/mimetype-report.txt 653
+18:17:42.688 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/processors-report.txt 3203
+18:17:42.689 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/responsecode-report.txt 73
+18:17:42.689 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/seeds-report.txt 128
+18:17:42.690 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/source-report.txt 984
+18:17:42.691 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/latest/reports/threads-report.txt 13
+18:17:42.692 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/logs/alerts.log 0
+18:17:42.693 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/logs/crawl.log 439401
+18:17:42.700 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3_err.log 4738
+18:17:42.701 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3_out.log 477893
+18:17:42.709 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix_out.log 1098
+18:17:42.710 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/job.log 450
+18:17:42.711 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/logs/nonfatal-errors.log 0
+18:17:42.712 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/logs/progress-statistics.log 9658
+18:17:42.713 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/logs/runtime-errors.log 0
+18:17:42.714 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/logs/scope.log 3590988
+18:17:42.764 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/heritrix3/jobs/13_1477587634204/logs/uri-errors.log 0
+18:17:42.766 INFO  d.n.h.heritrix3.HarvestDocumentation - Looking for files not having harvestprefix '13-7'
+18:17:42.768 INFO  d.n.c.utils.batch.BatchLocalFiles - The batchjob 'class dk.netarkivet.common.utils.cdx.ArchiveExtractCDXJob' has run for 0 seconds and has reached file '13-7-20161027170054741-00000-ciblee_2015_harvester-1.warc', which is number 1 out of 1
+18:17:42.769 INFO  d.n.c.utils.archive.ArchiveBatchJob - Processing archive file: 13-7-20161027170054741-00000-ciblee_2015_harvester-1.warc
+18:17:44.408 INFO  d.n.h.h.m.MetadataFileWriterWarc - harvester_focused/13_1477587634204/tmp-meta/cdx1003333431764806668.tmp/13-7-20161027170054741-00000-ciblee_2015_harvester-1.warc.cdx 299094
+18:17:44.419 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '13-7-20161027170054741-00000-ciblee_2015_harvester-1.warc' to arcrepository.
+18:17:46.417 INFO  d.n.h.heritrix3.PostProcessing - File '13-7-20161027170054741-00000-ciblee_2015_harvester-1.warc' uploaded successfully to arcrepository.
+18:17:46.417 INFO  d.n.h.heritrix3.PostProcessing - Uploading file '13-metadata-1.warc' to arcrepository.
+18:17:47.139 INFO  d.n.h.heritrix3.PostProcessing - File '13-metadata-1.warc' uploaded successfully to arcrepository.
+18:17:47.140 INFO  d.n.h.h.r.HarvestReportGenerator - Starting pre-processing of harvest report for job 13
+18:17:47.142 INFO  d.n.h.h.r.HarvestReportGenerator - DISREGARD_SEEDURL_INFORMATION_IN_CRAWLLOG: false
+18:17:47.376 INFO  d.n.h.h.r.HarvestReportGenerator - Finished pre-processing of harvest report for job 13, operation took 00d 00:03:55
+18:17:47.377 INFO  d.n.h.heritrix3.PostProcessing - Job with ID 13 finished with status DONE
+18:17:47.386 INFO  d.n.h.heritrix3.PostProcessing - Deleting final logs
+18:17:47.388 INFO  d.n.h.heritrix3.PostProcessing - Cleanup after harvesting job with id '13' and moving the rest of the job to oldjobsdir 'oldjobs' 
+18:17:47.394 INFO  d.n.h.heritrix3.PostProcessing - Done post-processing files for job 13 in dir: '/home/test/IMRT/harvester_focused/13_1477587634204'
+18:17:47.395 INFO  d.n.h.h.HarvestControllerServer - Ending crawl of job : 13
+18:17:47.396 INFO  d.n.h.heritrix3.PostProcessing - Looking for unprocessed crawldata in 'harvester_focused'
+18:17:47.398 INFO  d.n.h.h.HarvestControllerServer - Starts to listen to new jobs on queue '[Queue 'IMRT_COMMON_JOB_PARTIAL_FOCUSED']'
