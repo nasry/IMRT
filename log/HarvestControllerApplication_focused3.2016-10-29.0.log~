@@ -1,0 +1,265 @@
+17:22:04.189 INFO  d.n.h.h.HarvestControllerServer - Received crawlrequest for job 41: 'ID:99277-192.168.1.51(f7:db:b0:a7:73:6a)-50634-1477758175342: To IMRT_COMMON_JOB_PARTIAL_FOCUSED ReplyTo IMRT_COMMON_ERROR OK Job: Job 41 (state = SUBMITTED, HD = 4, channel = FOCUSED, snapshot = false, forcemaxcount = -1, forcemaxbytes = 1000000000, forcemaxrunningtime = 0, orderxml = default_orderxml, numconfigs = 1, created = Sat Oct 29 17:22:35 CET 2016, submitted = Sat Oct 29 17:22:55 CET 2016), metadata: [URL= metadata://netarkivet.dk/crawl/setup/duplicatereductionjobs?majorversion=1&minorversion=0&harvestid=4&harvestnum=2&jobid=41 ; mimetype= text/plain ; data= 28]'
+17:22:04.197 INFO  d.n.h.h.HarvestControllerServer - Started harvester thread for job 41
+17:22:04.201 INFO  d.n.common.distribute.JMSConnection - Removing listener from channel 'IMRT_COMMON_JOB_PARTIAL_FOCUSED'
+17:22:04.206 INFO  d.n.harvester.heritrix3.HarvestJob - Created crawl directory: 'harvester_focused/41_1477758124205'
+17:22:04.223 INFO  d.n.h.i.d.IndexRequestClient - Requesting an index of type 'DEDUP_CRAWL_LOG' for the jobs [28]
+17:23:04.865 INFO  d.n.h.indexserver.FileBasedCache - Generated index '/home/test/IMRT/cache/DEDUP_CRAWL_LOG/28-cache' of id '[28]', request was for '[28]'
+17:23:04.865 INFO  d.n.harvester.heritrix3.HarvestJob - Starting crawl of job : 41
+17:23:04.867 INFO  d.n.h.h.HeritrixLauncherAbstract - Make the template ready for Heritrix3
+17:23:04.878 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix for job 41 of harvest 4 in harvester_focused/41_1477758124205 in crawldir harvester_focused/41_1477758124205
+17:23:09.211 INFO  d.n.h.h.c.AbstractRestHeritrixController - Starting Heritrix3 with the following arguments:./bin/heritrix -b harvester-1 -p  8194 -a  admin:adminPassword -s h3server.jks,h3server,h3server 
+17:23:09.211 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting FOREGROUND to 'true'
+17:23:09.214 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting JAVA_OPTS to '-Xmx1598M  -Ddk.netarkivet.settings.file=/home/test/IMRT/conf/settings_HarvestControllerApplication_focused3.xml'
+17:23:09.215 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting HERITRIX_OUT to '/home/test/IMRT/harvester_focused/41_1477758124205/heritrix_out.log'
+17:23:09.215 INFO  d.n.h.h.c.AbstractRestHeritrixController - .. and setting output from heritrix3 to 'harvester_focused/41_1477758124205/heritrix3_out.log', and errors to 'harvester_focused/41_1477758124205/heritrix3_err.log'
+17:23:09.235 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine launched successfully
+17:23:20.142 INFO  d.n.h.h.c.HeritrixController - Heritrix3 REST interface up and running
+17:23:20.142 INFO  d.n.h.h.c.HeritrixController - Copying the crawler-beans.cxml file and seeds.txt to the heritrix3 jobdir 'harvester_focused/41_1477758124205/heritrix3/jobs/41_1477758124205'
+17:23:20.655 INFO  d.n.h.h.c.HeritrixController - H3 jobs available for building: 41_1477758124205 
+17:23:33.375 INFO  d.n.h.h.c.HeritrixController - Job 41_1477758124205 built successfully
+17:23:33.658 INFO  d.n.h.h.c.HeritrixController - The H3 job 41_1477758124205 in now in state CrawlControllerState.NASCENT
+17:24:41.775 WARN  d.n.h.h.c.HeritrixController - The job state is now RUNNING. Should have been CrawlControllerState.PAUSED
+17:24:41.836 INFO  d.n.h.h.c.HeritrixController - The job 41_1477758124205 is now in state RUNNING
+17:24:41.836 INFO  d.n.h.h.controller.HeritrixLauncher - Starting periodic CrawlControl with CRAWL_CONTROL_WAIT_PERIOD=20 seconds
+17:24:41.904 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:24:41.932 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:24:41.932 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 40.090090090090094%
+17:25:01.970 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:25:01.975 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:25:01.975 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 45.0199203187251%
+17:25:22.025 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:25:22.038 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:25:22.038 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 55.28169014084507%
+17:25:42.074 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:25:42.079 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:25:42.079 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 62.11180124223603%
+17:26:02.109 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:26:02.113 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:26:02.114 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 61.55844155844156%
+17:26:22.158 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:26:22.168 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:26:22.168 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 63.793103448275865%
+17:26:42.265 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:26:42.284 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:26:42.285 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 65.87112171837708%
+17:27:02.317 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:27:02.323 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:27:02.323 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 67.70601336302896%
+17:27:22.361 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:27:22.366 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:27:22.367 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 61.42322097378277%
+17:27:42.399 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:27:42.404 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:27:42.404 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 64.29872495446266%
+17:28:02.435 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:28:02.444 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:28:02.444 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 63.23777403035413%
+17:28:22.493 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:28:22.500 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:28:22.501 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 67.2787979966611%
+17:28:42.530 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:28:42.535 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:28:42.536 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 70.34596375617792%
+17:29:02.568 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:29:02.572 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:29:02.573 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 72.55520504731861%
+17:29:22.631 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:29:22.642 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:29:22.642 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 69.05444126074498%
+17:29:42.687 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:29:42.691 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:29:42.692 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 67.1018276762402%
+17:30:02.723 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:30:02.728 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:30:02.728 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 69.43734015345268%
+17:30:22.758 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:30:22.763 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:30:22.763 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 73.85204081632654%
+17:30:42.794 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:30:42.799 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:30:42.799 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 78.37150127226464%
+17:31:02.829 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:31:02.838 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:31:02.839 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 79.20792079207921%
+17:31:22.887 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:31:22.898 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:31:22.898 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 79.4717887154862%
+17:31:42.968 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:31:42.979 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:31:42.979 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 79.85948477751757%
+17:32:03.059 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:32:03.068 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:32:03.069 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 62.77056277056277%
+17:32:23.125 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:32:23.129 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:32:23.130 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 66.75191815856778%
+17:32:43.184 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:32:43.195 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:32:43.196 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 65.77235772357723%
+17:33:03.226 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:33:03.231 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:33:03.231 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 62.974203338391504%
+17:33:23.280 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:33:23.285 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:33:23.286 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 63.949139865370235%
+17:33:43.317 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:33:43.321 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:33:43.322 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 64.8991784914115%
+17:34:03.387 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:34:03.394 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:34:03.394 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 65.686994856723%
+17:34:23.424 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:34:23.428 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:34:23.429 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 68.81405563689604%
+17:34:43.481 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:34:43.485 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:34:43.486 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 72.51461988304094%
+17:35:03.538 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:35:03.547 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:35:03.547 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 75.45653761869978%
+17:35:23.576 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:35:23.580 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:35:23.581 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 78.24817518248175%
+17:35:43.622 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:35:43.627 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:35:43.628 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 81.26822157434403%
+17:36:03.656 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:36:03.665 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:36:03.665 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 84.18367346938776%
+17:36:23.709 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:36:23.716 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:36:23.716 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 87.09912536443149%
+17:36:43.745 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:36:43.749 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:36:43.750 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 88.73546511627907%
+17:37:03.813 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:37:03.826 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:37:03.826 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 90.21739130434783%
+17:37:23.855 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:37:23.859 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:37:23.860 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 91.83526011560694%
+17:37:43.932 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:37:43.938 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:37:43.938 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 93.23254139668826%
+17:38:03.968 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:38:03.975 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:38:03.976 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 94.82758620689656%
+17:38:24.006 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:38:24.010 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:38:24.011 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 96.35714285714286%
+17:38:44.050 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:38:44.060 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:38:44.060 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 97.44861800141743%
+17:39:04.095 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:39:04.100 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:39:04.100 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 97.48427672955975%
+17:39:24.141 INFO  d.n.h.h.d.CrawlProgressMessage - statusAsString is null for job 41. Considering the crawl to be not finished
+17:39:24.147 INFO  d.n.h.h.d.CrawlProgressMessage - StatusAsString = 'RUNNING'
+17:39:24.147 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID: 41, Harvest ID: 4, https://harvester-1:8194/engine
+null
+RUNNING 99.72047519217331%
+17:39:44.176 INFO  d.n.h.h.d.CrawlProgressMessage - Job 41 seems to be no longer in progress. 
+17:39:44.180 INFO  d.n.h.h.d.CrawlProgressMessage - Job 41 seems to be no longer in progress. 
+17:39:44.181 INFO  d.n.h.h.controller.HeritrixLauncher - Job ID 41: crawl is finished.
+17:39:44.181 INFO  d.n.h.h.controller.HeritrixLauncher - CrawlJob is now over
+17:39:44.242 INFO  d.n.h.h.c.HeritrixController - Tearing down h3 job 41_1477758124205
+17:39:44.921 ERROR d.n.h.h.HarvestControllerServer - Fatal error while operating job 'Job 41 (state = SUBMITTED, HD = 4, channel = FOCUSED, snapshot = false, forcemaxcount = -1, forcemaxbytes = 1000000000, forcemaxrunningtime = 0, orderxml = default_orderxml, numconfigs = 1, created = Sat Oct 29 17:22:35 CET 2016, submitted = Sat Oct 29 17:22:55 CET 2016)'
+dk.netarkivet.common.exceptions.IOFailure: No harvestInfo found in directory: /home/test/IMRT/harvester_focused/41_1477758124205
+	at dk.netarkivet.harvester.heritrix3.PostProcessing.doPostProcessing(PostProcessing.java:145) ~[netarchivesuite-heritrix3-controller.jar:cde61d78299cabccae6195908b81ef77c84a76b9]
+	at dk.netarkivet.harvester.heritrix3.HarvestControllerServer$HarvesterThread.run(HarvestControllerServer.java:457) ~[netarchivesuite-heritrix3-controller.jar:cde61d78299cabccae6195908b81ef77c84a76b9]
+17:39:44.928 INFO  d.n.h.h.c.AbstractRestHeritrixController - Heritrix3 engine shutdown was successful. ExitValue =  0
+17:39:44.971 ERROR d.n.common.utils.EMailNotifications - Mailing NetarchiveSuite-ERROR: Fatal error while operating job 'Job 41 (state = SUBMITTED, HD = 4, channel = FOCUSED, snapshot = false, forcemaxcount = -1, forcemaxbytes = 1000000000, forcemaxrunningtime = 0, orderxml = default_orderxml, numconfigs = 1, created = Sat Oct 29 17:22:35 CET 2016, submitted = Sat Oct 29 17:22:55 CET 2016)'
+dk.netarkivet.common.exceptions.IOFailure: No harvestInfo found in directory: /home/test/IMRT/harvester_focused/41_1477758124205
+	at dk.netarkivet.harvester.heritrix3.PostProcessing.doPostProcessing(PostProcessing.java:145) ~[netarchivesuite-heritrix3-controller.jar:cde61d78299cabccae6195908b81ef77c84a76b9]
+	at dk.netarkivet.harvester.heritrix3.HarvestControllerServer$HarvesterThread.run(HarvestControllerServer.java:457) ~[netarchivesuite-heritrix3-controller.jar:cde61d78299cabccae6195908b81ef77c84a76b9]
+17:39:44.971 INFO  d.n.h.h.HarvestControllerServer - Ending crawl of job : 41
+17:39:44.972 INFO  d.n.h.heritrix3.PostProcessing - Looking for unprocessed crawldata in 'harvester_focused'
+17:39:44.974 INFO  d.n.h.h.HarvestControllerServer - Starts to listen to new jobs on queue '[Queue 'IMRT_COMMON_JOB_PARTIAL_FOCUSED']'
