@@ -47,8 +47,8 @@
             <harvesting>
               <channel>FOCUSED</channel>
               <heritrix>
-                <guiPort>8196</guiPort>
-                <jmxPort>8197</jmxPort>
+                <guiPort>8198</guiPort>
+                <jmxPort>8199</jmxPort>
                 <jmxUsername>controlRole</jmxUsername>
                 <jmxPassword>R_D</jmxPassword>
               </heritrix>
