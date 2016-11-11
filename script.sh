@@ -17,13 +17,13 @@ sed -i "s/8192/$p2/g" /home/test/IMRT/conf/settings_HarvestControllerApplication
 ssh root@192.168.1.205 "kubectl get service/$app -o json  | jq  '.spec.ports[0].port = $p1 | .spec.ports[0].targetPort = $p1 | .spec.ports[1].port = $p2 | .spec.ports[1].targetPort = $p2' > service.json ; kubectl replace  -f service.json"
 
 
-echo "Sourcing /etc/profile ...";
-source /etc/profile;
+#echo "Sourcing /etc/profile ...";
+#source /etc/profile;
 
 
 
-echo "Restarting harvester applications ...";
-/home/test/IMRT/conf/restart.sh;
+#echo "Restarting harvester applications ...";
+#/home/test/IMRT/conf/restart.sh;
 
 
 
@@ -36,4 +36,6 @@ ssh test@192.168.1.51 "echo 192.168.1.205    $HOSTNAME >> /etc/hosts";
 ssh test@192.168.1.52 "echo 192.168.1.205    $HOSTNAME >> /etc/hosts";
 ssh test@192.168.1.59 "echo 192.168.1.205    $HOSTNAME >> /etc/hosts";
 
-echo "DONE";
+echo "Start harvester & MQ ...";
+/home/test/IMRT/conf/startall.sh;
+/MessageQueue5.1/mq/bin/imqbrokerd -reset store -tty
