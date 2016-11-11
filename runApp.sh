@@ -15,7 +15,7 @@ sed -i "s/8192/$p2/g" /home/test/IMRT/conf/settings_HarvestControllerApplication
 
 # change port in the service
 #ssh root@192.168.1.205 "kubectl get service/$app -o json  | jq  '.spec.ports[0].port = $p1 | .spec.ports[0].targetPort = $p1 | .spec.ports[1].port = $p2 | .spec.ports[1].targetPort = $p2' > service.json ; kubectl replace  -f service.json"
-curl http://192.168.1.205:8080/api/v1/namespaces/default/services/$app | jq  '.spec.ports[0].port = $p1 | .spec.ports[0].targetPort = $p1 | .spec.ports[1].port = $p2 | .spec.ports[1].targetPort = $p2' > harvester-auto.json;
+curl http://192.168.1.205:8080/api/v1/namespaces/default/services/$app | jq  ".spec.ports[0].port = $p1 | .spec.ports[0].targetPort = $p1 | .spec.ports[1].port = $p2 | .spec.ports[1].targetPort = $p2" > harvester-auto.json;
 curl http://192.168.1.205:8080/api/v1/namespaces/default/services/$app -XPUT -H'Content-Type: application/json' -d@harvester-auto.json
 
 #echo "Sourcing /etc/profile ...";
