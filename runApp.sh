@@ -38,4 +38,4 @@ ssh test@192.168.1.59 "echo 192.168.1.205    $HOSTNAME >> /etc/hosts";
 
 echo "Start harvester & MQ ...";
 /home/test/IMRT/conf/startall.sh;
-/MessageQueue5.1/mq/bin/imqbrokerd -reset store -tty
+/MessageQueue5.1/mq/bin/imqbrokerd -reset store -tty;
