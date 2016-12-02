@@ -37,6 +37,9 @@ echo -e "192.168.1.51    admin \n192.168.1.52    bitarchieve \n192.168.1.59    a
 #ssh test@192.168.1.52 "echo 192.168.1.205    $HOSTNAME >> /etc/hosts";
 #ssh test@192.168.1.59 "echo 192.168.1.205    $HOSTNAME >> /etc/hosts";
 
+echo "Restart incron service in order changes take effect";
+service incron restart;
+
 echo "Start harvester & MQ ...";
 /home/test/IMRT/conf/startall.sh;
 /MessageQueue5.1/mq/bin/imqbrokerd -reset store -tty;
